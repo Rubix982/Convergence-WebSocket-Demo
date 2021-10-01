@@ -12,33 +12,54 @@ overview: |-
   add in remote cursors, selections, and a Radar View that shows where other users are editing.
 --- -->
 
-<div class="wrapped-editor">
-  <div
-    class="editor"
-    id="ace-editor"
-    style="height: 98vh; width: 98vw; margin: 0; padding: 0"
-  ></div>
-  <div class="radar-view" id="radar-view"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace Editor</title>
+  </head>
+  <body>
+    <div class="wrapped-editor">
+      <div
+        class="editor"
+        id="ace-editor"
+        style="height: 98vh; width: 98vw; margin: 0; padding: 0"
+      ></div>
+      <div class="radar-view" id="radar-view"></div>
+    </div>
 
-<script src="js/id.js"></script>
-<script src="js/helpers.js"></script>
-<script src="./node_modules/toastr/build/toastr.min.js"></script>
-<script src="./node_modules/ace-builds/src/ace.js"></script>
-<script
-  src="./node_modules/@convergence/ace-collab-ext/umd/ace-collab-ext.js"
-  type="text/javascript"
-  charset="utf-8"
-></script>
-<script
-  src="./node_modules/@convergence/color-assigner/umd/color-assigner.min.js"
-  type="text/javascript"
-  charset="utf-8"
-></script>
-<script src="./js/contents.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/id.js"></script>
+    <script src="js/helpers.js"></script>
 
-<!-- Convergence resources -->
-<script src="./js/config.js"></script>
-<script src="./node_modules/rxjs/dist/bundles/rxjs.umd.min.js"></script>
-<script src="./node_modules/@convergence/convergence/convergence.global.js"></script>
-<script src="./js/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+
+    <script src="./node_modules/toastr/build/toastr.min.js"></script>
+    <script src="./node_modules/ace-builds/src/ace.js"></script>
+    <script
+      src="./node_modules/@convergence/ace-collab-ext/umd/ace-collab-ext.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="./node_modules/@convergence/color-assigner/umd/color-assigner.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="./js/contents.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+
+    <!-- Convergence resources -->
+    <script src="./js/config.js"></script>
+    <script src="./node_modules/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+    <script src="./node_modules/@convergence/convergence/convergence.global.js"></script>
+    <script src="./js/ace.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
