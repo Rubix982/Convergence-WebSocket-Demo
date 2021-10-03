@@ -27,7 +27,7 @@ let session = null;
 let doc = null;
 
 function handleOpen(model) {
-  console.log('Hello from handleOpen')
+  // console.log('Hello from handleOpen')
   editor = ace.edit("ace-editor");
   editor.setTheme('ace/theme/monokai');
 
@@ -159,7 +159,7 @@ let selectionReference = null;
 const selectionKey = "selection";
 
 function initSharedSelection(textModel) {
-  console.log('Hello from initSharedSelection');
+  // console.log('Hello from initSharedSelection');
   selectionManager = new AceCollabExt.AceMultiSelectionManager(editor.getSession());
 
   selectionReference = textModel.rangeReference(selectionKey);
@@ -177,7 +177,7 @@ function initSharedSelection(textModel) {
 
   textModel.on("reference", event => {
     if (event.reference.key() === selectionKey) {
-      console.log('New user');
+      // console.log('New user');
       addSelection(event.reference);
     }
   });
