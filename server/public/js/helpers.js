@@ -16,37 +16,13 @@ const copyUrlToClipboard = () => {
         document.getSelection().removeAllRanges();
         document.getSelection().addRange(selected);
     }
-
-    // toastr["success"]("URL Copied");
 };
-
-// toastr.options = {
-//     "closeButton": false,
-//     "debug": false,
-//     "newestOnTop": false,
-//     "progressBar": false,
-//     "positionClass": "toast-top-right",
-//     "preventDuplicates": false,
-//     "showDuration": "300",
-//     "hideDuration": "500",
-//     "timeOut": "2000",
-//     "extendedTimeOut": "1000",
-//     "showEasing": "swing",
-//     "hideEasing": "linear",
-//     "showMethod": "fadeIn",
-//     "hideMethod": "fadeOut"
-// };
 
 function randomDisplayName() {
     return "User-" + Math.round(Math.random() * 10000);
 }
 
 async function exampleLoaded() {
-    // const loading = await document.getElementById("wrapped-editor");
-    // if (loading.parentNode) {
-    //     loading.parentNode.removeChild(loading);
-    // }
-
     const content = document.getElementById("ace-editor");
     content.style.visibility = "visible";
 }
